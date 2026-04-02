@@ -134,26 +134,32 @@ variable "existing_hamgmt_subnet2_id" {
 variable "existing_public_subnet1_intrinsic_router_ip" {
   description = "Provide the IP address of the AWS intrinsic router (First IP from existing_public_subnet1)"
   type = string
+  default = ""
 }
 variable "existing_private_subnet1_intrinsic_router_ip" {
   description = "Provide the IP address of the AWS intrinsic router (First IP from existing_private_subnet1)"
   type = string
+  default = ""
 }
 variable "existing_hamgmt_subnet1_intrinsic_router_ip" {
   description = "Provide the IP address of the AWS intrinsic router (First IP from existing_hamgmt_subnet1)"
   type = string
+  default = ""
 }
 variable "existing_public_subnet2_intrinsic_router_ip" {
   description = "Provide the IP address of the AWS intrinsic router (First IP from existing_public_subnet2)"
   type = string
+  default = ""
 }
 variable "existing_private_subnet2_intrinsic_router_ip" {
   description = "Provide the IP address of the AWS intrinsic router (First IP from existing_private_subnet2)"
   type = string
+  default = ""
 }
 variable "existing_hamgmt_subnet2_intrinsic_router_ip" {
   description = "Provide the IP address of the AWS intrinsic router (First IP from existing_hamgmt_subnet2)"
   type = string
+  default = ""
 }
 variable "tgw_bgp_asn" {
   description = "[This is needed for either new or existing TGW] Provide a BGP ASN for TGW"
@@ -175,7 +181,6 @@ variable "tgw_connect_peer2_inside_cidr" {
   type = string
   default = "169.254.7.0/29"
 }
-
 variable "existing_tgw_id" {
   description = "[Leave blank if an existing tgw will not be used] If you are using an existing TGW, provide the TGW  ID to create VPC routes to reach it"
   type = string
